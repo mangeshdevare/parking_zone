@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticket_number: MyText
+  car: one
+  parking_spot: one
+  parking_lot: one
+  in_time: 2022-07-23 22:27:07
+  out_time: 2022-07-23 22:27:07
+  total_charges: 1.5
+  payment_mode: MyText
+  payment_status: MyText
+
+two:
+  ticket_number: MyText
+  car: two
+  parking_spot: two
+  parking_lot: two
+  in_time: 2022-07-23 22:27:07
+  out_time: 2022-07-23 22:27:07
+  total_charges: 1.5
+  payment_mode: MyText
+  payment_status: MyText

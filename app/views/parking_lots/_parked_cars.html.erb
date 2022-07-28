@@ -1,0 +1,29 @@
+<h1>Parked Cars</h1>
+<div class="col-sm-9">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Registration Number</th>
+        <th scope="col">Color</th>
+        <th scope="col">Parking Spot</th>
+        <th scope="col">In Time</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @parked_cars.each do |ticket| %>
+        <tr>
+          <td> <%= ticket.car.registration_number %> </td>
+          <td> <%= ticket.car.color %> </td>
+          <td> <%= ticket.parking_spot.number %> </td>
+          <td> <%= ticket.in_time.to_formatted_s(:long_ordinal)  %> </td>
+          <td>
+            <%= button_tag " Exit Car", class: "btn btn-primary", data: { toggle: "modal", target: "#exampleModal", hourlycharge: current_parking_lot.hourly_charge, intime: "#{ticket.in_time}", whatever: "#{ticket.car.registration_number}"} %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= render 'exit_car' %>
+</div>
