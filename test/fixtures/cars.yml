@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registration_number: MyText
+  color: MyText
+  brand: MyText
+  model: MyText
+  type: MyText
+
+two:
+  registration_number: MyText
+  color: MyText
+  brand: MyText
+  model: MyText
+  type: MyText

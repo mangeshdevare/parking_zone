@@ -1,0 +1,28 @@
+<h1>Tickets History</h1>
+<div class="col-sm-9">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Registration Number</th>
+        <th scope="col">Color</th>
+        <th scope="col">Parking Spot</th>
+        <th scope="col">In Time</th>
+        <th scope="col">Out Time</th>
+        <th scope="col">Total Charges </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @parked_tickets.each do |ticket| %>
+        <tr>
+          <td> <%= ticket.car.registration_number %> </td>
+          <td> <%= ticket.car.color %> </td>
+          <td> <%= ticket.parking_spot.number %> </td>
+          <td> <%= ticket.in_time.to_formatted_s(:long_ordinal)  %> </td>
+          <td> <%= ticket.out_time&.to_formatted_s(:long_ordinal)  %> </td>
+          <td> <%= ticket.total_charges %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
